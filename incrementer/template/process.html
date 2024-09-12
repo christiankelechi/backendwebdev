@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Welcome to Codeblaze Academy</h1>
+    <label for="">{{current_value}}</label>
+
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Increase</button>
+    </form>
+    <form action="{% url 'process_decrease' %}" method="post">
+        {% csrf_token %}
+
+        <button type="submit">Decrease</button>
+
+    </form>
+
+</body>
+</html>
