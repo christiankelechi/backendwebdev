@@ -12,7 +12,8 @@ def index(request):
             orginal_value.write(str(current_value))
         
         return render(request,"index.html",{"current_value":current_value})
-    return render(request,"index.html",{"current_value":current_value})
+    else:
+        return render(request,"index.html",{"current_value":current_value})
 
 from django.shortcuts import render
 
