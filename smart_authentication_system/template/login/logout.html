@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .logout-container {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .logout-container h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .logout-container p {
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .logout-btn {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .logout-btn:hover {
+            background-color: #ff3333;
+        }
+        .cancel-btn {
+            background-color: #ddd;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .cancel-btn:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Logout</h1>
+        <p>Are you sure you want to log out?</p>
+        <button class="logout-btn" onclick="logout()">Yes, Log Out</button>
+        <button class="cancel-btn" onclick="cancel()">Cancel</button>
+    </div>
+
+    <script>
+        function logout() {
+            // Implement your logout logic here
+            alert("Logged out successfully!");
+            // Redirect to the login page or homepage
+            window.location.href = "/login";
+        }
+
+        function cancel() {
+            // Cancel and return to the previous page
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
